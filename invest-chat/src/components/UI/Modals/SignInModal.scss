@@ -1,10 +1,10 @@
-.Sign {
+.sign {
   position: fixed;
 
   opacity: 0;
   pointer-events: none;
 
-  &_active {
+  &__active {
     opacity: 1;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@
     backdrop-filter: blur(3px);
   }
 
-  &_block {
+  &__block {
     width: 980px;
     margin: 0 auto;
     // display: flex;
@@ -29,8 +29,7 @@
     border-radius: 12px;
   }
 
-
-  &_form {
+  &__form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -45,14 +44,13 @@
     }
   }
 
-
-  &_title {
+  &__title {
     margin: 68px 0 8px;
     font-weight: 500;
     font-size: 52px;
   }
 
-  &_text {
+  &__text {
     line-height: 24px;
     letter-spacing: 1px;
     font-weight: 400;
@@ -60,7 +58,7 @@
     margin-bottom: 56px;
   }
 
-  &_number_input {
+  &__number-input {
     width: 524px;
     padding-left: 16px;
     height: 44px;
@@ -70,7 +68,7 @@
     margin-bottom: 16px;
   }
 
-  &_email_input {
+  &__email-input {
     padding-left: 16px;
     width: 524px;
     // min-width: 100px;
@@ -80,7 +78,7 @@
     margin-bottom: 26px;
   }
 
-  &_or {
+  &__or {
     font-weight: 500;
     font-size: 14px;
     margin-bottom: 26px;
@@ -92,12 +90,10 @@
       color: $grey-form-module;
     }
 
-    &:after{
+    &:after {
       max-width: 237px;
       height: 1px;
       color: $grey-form-module;
     }
   }
-
-
 }

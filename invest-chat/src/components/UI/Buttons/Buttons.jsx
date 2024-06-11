@@ -16,18 +16,12 @@ const ButtonRed = (props) => {
   );
 };
 
-const ButtonGrey = (props) => {
-  return <button className={styles.grey}>{props.children}</button>;
-}
-
 export const ButtonFactory = (props) => {
   switch (props.type) {
     case "white":
       return ButtonWhite(props);
     case "red":
       return ButtonRed(props);
-    case 'grey':
-      return ButtonGrey(props);
     default:
       return ButtonRed(props);
   }
