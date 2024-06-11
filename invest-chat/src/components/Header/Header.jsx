@@ -1,5 +1,5 @@
 import "./Header.scss";
-import { ButtonFactory } from "./UI/Buttons/Buttons";
+import { ButtonFactory } from "../UI/Buttons/Buttons";
 
 const Header = () => {
   return (
