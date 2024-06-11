@@ -5,22 +5,25 @@
   line-height: 21.6px;
   letter-spacing: 0.02em;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 8px 15px;
+  height: 38px;
+  gap: 10px;
 }
 
 .white {
   background-color: transparent;
   border: 1px solid $grey-dark;
   color: $grey-dark;
-  border-radius: 12px;
-  padding: 8px 15px;
 }
 
 .red {
   background-color: $red;
   border: none;
   color: white;
-  border-radius: 12px;
-  padding: 8px 15px;
 }
 
 .grey {

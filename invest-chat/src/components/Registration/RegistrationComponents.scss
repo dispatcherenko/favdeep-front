@@ -1,0 +1,124 @@
+.form {
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  &__container {
+    &--personal {
+      display: grid;
+      grid-template-rows: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-areas:
+        "name occupation phone"
+        "email country index"
+        "address itn 0";
+    }
+    &--radio {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+  }
+
+  &__radio-wrap {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  &__radio-label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+
+    padding: 6px 53px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  &__radio-label:before {
+    content: "";
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 1px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid $black;
+  }
+
+  /* Checked */
+  input[type="radio"]:checked + &__radio-label:after {
+    content: "";
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    bottom: 1px;
+    background-color: $black;
+    border-radius: 50%;
+  }
+
+  /* Hover */
+  &__radio-label:hover:before {
+    border: 2px solid $grey;
+  }
+
+  input[type="radio"]:hover + &__radio-label:hover:after {
+    background-color: $grey;
+  }
+
+  &__text-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #name {
+    grid-area: name;
+  }
+
+  #occupation {
+    grid-area: occupation;
+  }
+
+  #phone {
+    grid-area: phone;
+  }
+
+  #email {
+    grid-area: email;
+  }
+
+  #country {
+    grid-area: country;
+  }
+
+  #index {
+    grid-area: index;
+  }
+
+  #address {
+    grid-area: address;
+  }
+
+  #itn {
+    grid-area: itn;
+  }
+}
