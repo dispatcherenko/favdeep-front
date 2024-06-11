@@ -1,11 +1,19 @@
 import styles from "./Buttons.module.scss";
 
 const ButtonWhite = (props) => {
-  return <button className={styles.white}>{props.children}</button>;
+  return (
+    <button {...props} className={styles.white}>
+      {props.children}
+    </button>
+  );
 };
 
 const ButtonRed = (props) => {
-  return <button className={styles.red}>{props.children}</button>;
+  return (
+    <button {...props} className={styles.red}>
+      {props.children}
+    </button>
+  );
 };
 
 export const ButtonFactory = (props) => {
