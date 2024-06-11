@@ -1,0 +1,103 @@
+.Sign {
+  position: fixed;
+
+  opacity: 0;
+  pointer-events: none;
+
+  &_active {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    background: rgb(46 46 46 / 71%);
+    pointer-events: all;
+    backdrop-filter: blur(3px);
+  }
+
+  &_block {
+    width: 980px;
+    margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
+    background-color: $grey-form;
+    border-radius: 12px;
+  }
+
+
+  &_form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & a {
+      opacity: 0, 6;
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(40, 46, 60, 1);
+      text-decoration: none;
+      margin-bottom: 68px;
+    }
+  }
+
+
+  &_title {
+    margin: 68px 0 8px;
+    font-weight: 500;
+    font-size: 52px;
+  }
+
+  &_text {
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 56px;
+  }
+
+  &_number_input {
+    width: 524px;
+    padding-left: 16px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(192, 197, 206, 1);
+    // border-color: rgba(217, 217, 217, 1);
+    margin-bottom: 16px;
+  }
+
+  &_email_input {
+    padding-left: 16px;
+    width: 524px;
+    // min-width: 100px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(192, 197, 206, 1);
+    margin-bottom: 26px;
+  }
+
+  &_or {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 26px;
+    margin: 0 12px 26px 12px;
+
+    &:before {
+      max-width: 237px;
+      height: 1px;
+      color: $grey-form-module;
+    }
+
+    &:after{
+      max-width: 237px;
+      height: 1px;
+      color: $grey-form-module;
+    }
+  }
+
+
+}
