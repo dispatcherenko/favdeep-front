@@ -1,0 +1,24 @@
+.white,
+.red {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.white {
+  background-color: transparent;
+  border: 1px solid $grey-dark;
+  color: $grey-dark;
+  border-radius: 12px;
+  padding: 8px 15px;
+}
+
+.red {
+  background-color: $red;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 8px 15px;
+}
