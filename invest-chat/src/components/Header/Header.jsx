@@ -2,7 +2,7 @@ import "./Header.scss";
 import { useNavigate } from "react-router-dom";
 import { ButtonFactory } from "../UI/Buttons/Buttons";
 
-const Header = () => {
+const Header = ({setModalActive}) => {
   const navigate = useNavigate();
   return (
     <header className="header">
@@ -15,7 +15,7 @@ const Header = () => {
         Invest Chat
       </h1>
       <nav className="header__nav">
-        <span className="header__enter">Войти</span>
+        <span className="header__enter" onClick={() => setModalActive(true)}>Войти</span>
         <ButtonFactory
           onClick={() => {
             navigate("/registration");

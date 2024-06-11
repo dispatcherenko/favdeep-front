@@ -1,10 +1,10 @@
-import "./SignIn.scss"
+import "./SignInModal.scss"
 import { ButtonFactory } from "../../components/UI/Buttons/Buttons";
 
-const SignInPage = () => {
+const SignInModal = ({active, setActive}) => {
   return (
-    <main className="SightIn">
-      <div className="Sign_block">
+    <main className={active ? "Sign_active" : "Sign"} onClick={() => setActive(false)} >
+      <div className={active ? "Sign_block" : "block"} onClick={e => e.stopPropagation()}>
         <form action="" className="Sign_form">
           <label className="Sign_title">Вход на сайт</label>
           <span className="Sign_text">Войди и получи ответы на свои вопросы</span>
@@ -23,4 +23,4 @@ const SignInPage = () => {
   )
 }
 
-export default SignInPage;
+export default SignInModal;
