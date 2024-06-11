@@ -1,0 +1,89 @@
+// @use "../../styles/variables";
+
+.Sign{
+  // @include container;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+
+  // $grey-form: rgba(217, 217, 217, 1);
+  
+
+  &_block {
+    max-width: 980px;
+    min-width: 320px;
+    height: 554px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: $grey-form;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+
+  &_title {
+    margin: 68px 0 8px;
+    font-weight: 500;
+    font-size: 52px;
+  }
+
+  &_text {
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 56px;
+  }
+
+  &_number_input {
+    width: 524px;
+    padding-left: 16px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(192, 197, 206, 1);
+    // border-color: rgba(217, 217, 217, 1);
+    margin-bottom: 16px;
+  }
+
+  &_email_input {
+    padding-left: 16px;
+    width: 524px;
+    // min-width: 100px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(192, 197, 206, 1);
+    margin-bottom: 26px;
+  }
+
+  &_or { 
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 26px;
+
+    &:before {
+      max-width: 237px;
+      height: 1px;
+      color: $grey-form-module;
+    }
+    &:after {
+      max-width: 237px;
+      height: 1px;
+      color: $grey-form-module;
+    }
+  }
+
+  &_form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & a {
+      opacity: 0,6;
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(40, 46, 60, 1);
+      text-decoration: none
+    }
+  }
+}
