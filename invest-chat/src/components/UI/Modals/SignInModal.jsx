@@ -30,7 +30,7 @@ const SignInModal = ({ active, setActive }) => {
           />
           <div className="sign__or">или</div>
           <ButtonFactory type="red">Вход через mos.ru</ButtonFactory>
-          <p href="">Eще не регистрировались?</p>
+          <p href=""><a href="">Eще не регистрировались?</a></p>
         </form>
       </div>
     </main>
