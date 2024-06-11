@@ -1,10 +1,10 @@
-.Sign {
+.sign {
   position: fixed;
 
   opacity: 0;
   pointer-events: none;
 
-  &_active {
+  &__active {
     opacity: 1;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@
     backdrop-filter: blur(3px);
   }
 
-  &_block {
+  &__block {
     width: 980px;
     margin: 0 auto;
     // display: flex;
@@ -29,8 +29,7 @@
     border-radius: 12px;
   }
 
-
-  &_form {
+  &__form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -43,16 +42,27 @@
       text-decoration: none;
       margin-bottom: 68px;
     }
+
+    & p {
+      margin: 12px 0 68px 0
+    }
+
+
+    & [type="red"] {
+      background-color: rgba(52, 52, 52, 1);
+      width: 524px;
+      height: 44px;
+      border-radius: 100px;
+    }
   }
 
-
-  &_title {
+  &__title {
     margin: 68px 0 8px;
     font-weight: 500;
     font-size: 52px;
   }
 
-  &_text {
+  &__text {
     line-height: 24px;
     letter-spacing: 1px;
     font-weight: 400;
@@ -60,32 +70,32 @@
     margin-bottom: 56px;
   }
 
-  &_number_input {
+  &__number-input {
     width: 524px;
     padding-left: 16px;
     height: 44px;
     border-radius: 8px;
     border: 1px solid rgba(192, 197, 206, 1);
-    // border-color: rgba(217, 217, 217, 1);
     margin-bottom: 16px;
   }
 
-  &_email_input {
+  &__email-input {
     padding-left: 16px;
     width: 524px;
-    // min-width: 100px;
     height: 44px;
     border-radius: 8px;
     border: 1px solid rgba(192, 197, 206, 1);
     margin-bottom: 26px;
   }
 
-  &_or {
+
+
+  &__or {
+
     display: flex;
     align-items: center;
     font-weight: 500;
     font-size: 14px;
-    margin-bottom: 26px;
     margin: 0 12px 26px 12px;
 
     &:before {
@@ -97,7 +107,9 @@
       background-color: $grey-form-module;
     }
 
-    &:after{
+
+
+    &:after {
       content: '';
       display: block;
       width: 237px;

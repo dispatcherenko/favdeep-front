@@ -2,7 +2,7 @@ import styles from "./Buttons.module.scss";
 
 const ButtonWhite = (props) => {
   return (
-    <button {...props} className={styles.white}>
+    <button {...props} className={styles.white + " " + props.className}>
       {props.children}
     </button>
   );
@@ -10,15 +10,11 @@ const ButtonWhite = (props) => {
 
 const ButtonRed = (props) => {
   return (
-    <button {...props} className={styles.red}>
+    <button {...props} className={styles.red + " " + props.className}>
       {props.children}
     </button>
   );
 };
-
-const ButtonGrey = (props) => {
-  return <button className={styles.grey}>{props.children}</button>;
-}
 
 export const ButtonFactory = (props) => {
   switch (props.type) {
@@ -26,8 +22,6 @@ export const ButtonFactory = (props) => {
       return ButtonWhite(props);
     case "red":
       return ButtonRed(props);
-    case 'grey':
-      return ButtonGrey(props);
     default:
       return ButtonRed(props);
   }

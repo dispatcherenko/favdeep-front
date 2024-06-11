@@ -1,0 +1,46 @@
+.reg {
+  @include container;
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__footer {
+    margin-top: 32px;
+    position: relative;
+    display: flex;
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    width: 140px;
+    height: 48px;
+  }
+
+  &__next {
+    right: 0px;
+  }
+
+  &__title {
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  &__nav {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+}
