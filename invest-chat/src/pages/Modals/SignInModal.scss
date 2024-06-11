@@ -81,23 +81,29 @@
   }
 
   &_or {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     margin-bottom: 26px;
     margin: 0 12px 26px 12px;
 
     &:before {
-      max-width: 237px;
+      content: '';
+      display: block;
+      width: 237px;
       height: 1px;
-      color: $grey-form-module;
+      margin-right: 12px;
+      background-color: $grey-form-module;
     }
 
     &:after{
-      max-width: 237px;
+      content: '';
+      display: block;
+      width: 237px;
       height: 1px;
-      color: $grey-form-module;
+      margin-left: 12px;
+      background-color: $grey-form-module;
     }
   }
-
-
 }
