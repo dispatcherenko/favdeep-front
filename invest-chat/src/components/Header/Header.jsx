@@ -1,6 +1,7 @@
 import "./Header.scss";
 import { useNavigate } from "react-router-dom";
 import { ButtonFactory } from "../UI/Buttons/Buttons";
+import Door from "../../assets/door.svg";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Header = () => {
           }}
           type="white"
         >
+          <img src={Door} alt="React Logo" />
           Регистрация
         </ButtonFactory>
         <ButtonFactory type="red">Спросить AI-бота</ButtonFactory>

@@ -2,7 +2,7 @@ import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./styles/index.scss";
-import RegistrationPage from "./pages/Registration/RegistrationPage";
+import RegistrationPage from "./pages/Registration/Registration";
 
 function App() {
   return (

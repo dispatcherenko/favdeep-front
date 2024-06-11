@@ -2,7 +2,7 @@ import styles from "./Buttons.module.scss";
 
 const ButtonWhite = (props) => {
   return (
-    <button {...props} className={styles.white}>
+    <button {...props} className={styles.white + " " + props.className}>
       {props.children}
     </button>
   );
@@ -10,7 +10,7 @@ const ButtonWhite = (props) => {
 
 const ButtonRed = (props) => {
   return (
-    <button {...props} className={styles.red}>
+    <button {...props} className={styles.red + " " + props.className}>
       {props.children}
     </button>
   );
