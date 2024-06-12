@@ -1,8 +1,47 @@
+.sign__tabs__item:not(._active) {
+  display: none;
+}
+
+._active-button {
+  background:  rgba(225, 9, 21, 1);
+  width: 200px;
+  color: #fff;
+}
+
 .sign {
   position: fixed;
-
   opacity: 0;
   pointer-events: none;
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__button {
+      width: 236px;
+      height: 44px;
+      border: 1px solid rgba(52, 52, 52, 1);
+      
+      &:not(._active-button) {
+        
+        background: rgba(203, 203, 203, 1);
+      }
+
+      &-left {
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      &-right {
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
+  }
+
+  &__nav {
+    margin-bottom: 20px;
+  }
 
   &__active {
     opacity: 1;
@@ -15,7 +54,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-    background: rgb(46 46 46 / 71%);
+    background: rgba(255, 255, 255, 0);
     pointer-events: all;
     backdrop-filter: blur(3px);
   }
@@ -44,12 +83,16 @@
     }
 
     & p {
-      margin: 12px 0 68px 0
+      margin: 12px 0 26px;
     }
 
+    & label {
+      position: relative;
+      align-self: baseline;
+      margin: 0 0 12px 14px;
+    }
 
     & [type="red"] {
-      background-color: rgba(52, 52, 52, 1);
       width: 524px;
       height: 44px;
       border-radius: 100px;
@@ -67,7 +110,7 @@
     letter-spacing: 1px;
     font-weight: 400;
     font-size: 16px;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 
   &__number-input {
