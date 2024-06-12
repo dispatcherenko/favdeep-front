@@ -2,31 +2,33 @@ import "./Header.scss";
 import { useNavigate } from "react-router-dom";
 import { ButtonFactory } from "../UI/Buttons/Buttons";
 import Door from "../../assets/door.svg";
+import Logo from "../../assets/logo.svg";
 
-const Header = ({setModalActive}) => {
+const Header = ({ setModalActive }) => {
   const navigate = useNavigate();
   return (
     <header className="header">
-      <h1
+      <div
         onClick={() => {
           navigate("/");
         }}
         className="header__logo"
       >
-        Invest Chat
-      </h1>
+        <img src={Logo} alt="logo" />
+      </div>
       <nav className="header__nav">
-        <span className="header__enter" onClick={() => setModalActive(true)}>Войти</span>
+        <ButtonFactory type="white" onClick={() => setModalActive(true)}>
+          Войти
+        </ButtonFactory>
         <ButtonFactory
           onClick={() => {
             navigate("/registration");
           }}
           type="white"
         >
-          <img src={Door} alt="React Logo" />
+          <img src={Door} alt="door" />
           Регистрация
         </ButtonFactory>
-        <ButtonFactory type="red">Спросить AI-бота</ButtonFactory>
       </nav>
     </header>
   );

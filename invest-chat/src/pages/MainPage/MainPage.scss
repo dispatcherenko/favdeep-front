@@ -7,29 +7,41 @@
 
   &__head {
     margin: 104px 0 36px;
-    max-width: 744px;
+    max-width: 841px;
     font-size: 72px;
     font-weight: 700;
     line-height: 80px;
     letter-spacing: -0.02em;
     text-align: center;
+
+    &--important {
+      color: $red;
+    }
   }
 
   &__text {
     margin: 0 0 36px;
     max-width: 764px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: center;
   }
 
-  &__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-    width: 764px;
+  &__button {
+    width: 224pxpx;
+    height: 55pxpx;
+    top: 543px;
+    left: 608px;
+    padding: 14px 42px 14px 42px;
+    gap: 10px;
+    border-radius: 12px;
+    opacity: 0px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    text-align: center;
   }
 }
