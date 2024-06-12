@@ -2,11 +2,18 @@ import "./Registration.scss";
 import { ButtonFactory } from "../../components/UI/Buttons/Buttons";
 import { RegistrationFactory } from "../../components/Registration/RegistrationComponents";
 import { useMultistepForm } from "../../hooks/useMultiStepForm";
+import { useState } from "react";
 
 const RegistrationPage = (props) => {
+  const [userType, setUserType] = useState("fiz");
+
   const { currentStep, steps, step, next, prev } = useMultistepForm([
-    <RegistrationFactory page="1" />,
-    <RegistrationFactory page="2" />,
+    <RegistrationFactory
+      page="1"
+      userType={userType}
+      setUserType={setUserType}
+    />,
+    <RegistrationFactory page="2" userType={userType} />,
     <RegistrationFactory page="3" />,
   ]);
 
@@ -20,6 +27,7 @@ const RegistrationPage = (props) => {
             {currentStep + 1} из {steps.length}
           </span>
         </header>
+
         {step}
 
         <footer className="reg__footer">
