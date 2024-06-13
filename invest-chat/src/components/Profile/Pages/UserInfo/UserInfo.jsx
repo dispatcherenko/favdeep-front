@@ -36,7 +36,7 @@ const UserInfo = (props) => {
                 return { ...prev };
               });
             }}
-            checked={selectedPage === "info"}
+            defaultChecked={selectedPage === "info"}
             disabled={isAnyChanging()}
           />
           <label className="user-info__label" htmlFor="info">
@@ -49,7 +49,7 @@ const UserInfo = (props) => {
             name="card"
             id="status"
             onClick={() => setSelectedPage("status")}
-            checked={selectedPage === "status"}
+            defaultChecked={selectedPage === "status"}
             disabled={isAnyChanging()}
           />
           <label className="user-info__label" htmlFor="status">
@@ -65,7 +65,7 @@ const UserInfo = (props) => {
               setSelectedPage("safety");
               setIsChanging(true);
             }}
-            checked={selectedPage === "safety"}
+            defaultChecked={selectedPage === "safety"}
             disabled={isAnyChanging()}
           />
           <label className="user-info__label" htmlFor="safety">

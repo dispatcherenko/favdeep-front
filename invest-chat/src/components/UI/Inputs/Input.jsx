@@ -2,7 +2,11 @@ import styles from "./Inputs.module.scss";
 
 const Input = (props) => {
   return (
-    <span className={styles.wrap + " " + props.className} id={props.name}>
+    <span
+      className={styles.wrap + " " + props.className}
+      id={props.name}
+      style={props.style}
+    >
       <label htmlFor={props.name} className={styles.label}>
         {props.text}
       </label>

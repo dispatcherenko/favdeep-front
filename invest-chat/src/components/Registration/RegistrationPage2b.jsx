@@ -1,44 +1,63 @@
+import Input from "../UI/Inputs/Input";
 import "./RegistrationComponents.scss";
 
 const RegistrationPage2b = (props) => {
   return (
     <div className="form__container--personal-b">
-      <span className="form__text-field" id="name">
-        <label>ФИО</label>
-        <input type="text" placeholder="Введите ваше ФИО" />
-      </span>
-      <span className="form__text-field" id="orrganization">
-        <label>Наименование организации</label>
-        <input type="text" placeholder="Введите название организации" />
-      </span>
-      <span className="form__text-field" id="itp">
-        <label>ИНН</label>
-        <input type="number" placeholder="Укажите ИНН организации" />
-      </span>
-      <span className="form__text-field" id="email">
-        <label>Электронная почта</label>
-        <input type="email" placeholder="name@example.com" />
-      </span>
-      <span className="form__text-field" id="page">
-        <label>Веб сайт организации</label>
-        <input type="url" placeholder="https://..." />
-      </span>
-      <span className="form__text-field" id="type">
-        <label>Отрасль ведения хоз. деятельности</label>
-        <input type="number" placeholder="Выберите отрасль" />
-      </span>
-      <span className="form__text-field" id="country">
-        <label>Страна</label>
-        <input type="text" placeholder="Выберите страну" />
-      </span>
-      <span className="form__text-field" id="city">
-        <label>Город</label>
-        <input type="text" placeholder="Город, улица, дом, квартира" />
-      </span>
-      <span className="form__text-field" id="occupation">
-        <label>Должность</label>
-        <input type="text" placeholder="Должность" />
-      </span>
+      <Input
+        type="text"
+        placeholder="Введите ваше ФИО"
+        name="name"
+        text="ФИО"
+      />
+      <Input
+        type="text"
+        placeholder="Введите название организации"
+        name="organization"
+        text="Наименование организации"
+      />
+      <Input
+        type="number"
+        placeholder="Укажите ИНН организации"
+        name="itp"
+        text="ИНН"
+      />
+      <Input
+        type="email"
+        placeholder="name@example.com"
+        name="email"
+        text="Электронная почта"
+      />
+      <Input
+        type="url"
+        placeholder="https://..."
+        name="page"
+        text="Веб сайт организации"
+      />
+      <Input
+        type="text"
+        placeholder="Выберите отрасль"
+        name="type"
+        text="Отрасль ведения хоз. деятельности"
+      />
+      <Input
+        type="text"
+        placeholder="Выберите страну"
+        name="country"
+        text="Страна"
+      />
+      <Input
+        type="text"
+        placeholder="Город, улица, дом, квартира"
+        name="city"
+        text="Город"
+      />
+      <Input
+        type="text"
+        placeholder="Введите должность"
+        name="occupation"
+        text="Должность"
+      />
     </div>
   );
 };
