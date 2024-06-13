@@ -1,0 +1,95 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    gap: 32px;
+  }
+
+  &__card {
+    height: auto;
+  }
+
+  &__label {
+    transition: all 0.2s;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  /* Checked */
+  input[type="radio"]:checked + &__label {
+    color: $red;
+  }
+
+  input[type="radio"]:disabled + &__label {
+    color: $grey-light;
+    cursor: default;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+    &--red {
+      color: $red;
+      margin-right: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__inputs {
+    gap: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info-right,
+  &__info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__button {
+    width: 214px;
+  }
+
+  &__buttons {
+    margin-top: 24px;
+    display: flex;
+    gap: 18px;
+  }
+}

@@ -16,7 +16,7 @@ const ButtonRed = (props) => {
   );
 };
 
-export const ButtonFactory = (props) => {
+const ButtonFactory = (props) => {
   switch (props.type) {
     case "white":
       return ButtonWhite(props);
@@ -26,3 +26,5 @@ export const ButtonFactory = (props) => {
       return ButtonRed(props);
   }
 };
+
+export default ButtonFactory;
