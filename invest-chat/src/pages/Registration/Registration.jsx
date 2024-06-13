@@ -1,5 +1,5 @@
 import "./Registration.scss";
-import { ButtonFactory } from "../../components/UI/Buttons/Buttons";
+import ButtonFactory from "../../components/UI/Buttons/Buttons";
 import { RegistrationFactory } from "../../components/Registration/RegistrationComponents";
 import { useMultistepForm } from "../../hooks/useMultiStepForm";
 import { useState } from "react";

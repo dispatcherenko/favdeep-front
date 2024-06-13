@@ -23,10 +23,10 @@ const RegistrationPage3 = (props) => {
         <input
           type="checkbox"
           id="agree"
-          class="form__custom-checkbox"
+          className="form__custom-checkbox"
           required
         />
-        <label for="agree">
+        <label htmlFor="agree">
           Я соглашаюсь с <a href="/">Условиями использования</a>
         </label>
       </div>
