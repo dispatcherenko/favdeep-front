@@ -1,5 +1,5 @@
 import "./MainPage.scss";
-import { ButtonFactory } from "../../components/UI/Buttons/Buttons";
+import ButtonFactory from "../../components/UI/Buttons/Buttons";
 
 const MainPage = (props) => {
   return (

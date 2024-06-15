@@ -2,6 +2,7 @@ import "./SignInModal.scss";
 import { ButtonFactory } from "../Buttons/Buttons";
 import { useState } from "react";
 
+
 const SignInModal = ({ active, setActive }) => {
 
   // const [activeButton, setActiveButton] = useState(true);
@@ -86,9 +87,26 @@ const SignInModal = ({ active, setActive }) => {
             </div>
           </div>
         </div>
-
-      </div>
-    </main>
+        {/* <input
+          className="sign__number-input"
+          type="phone"
+          name="phone-number"
+          placeholder="Номер телефона"
+        />
+        <input
+          className="sign__email-input"
+          type="email"
+          name="email-address"
+          placeholder="Email"
+        />
+        <div className="sign__or">или</div>
+        <ButtonFactory type="red">Вход через mos.ru</ButtonFactory>
+        <p href="">
+          <a href="">Eще не регистрировались?</a>
+        </p>
+      </form> */}
+    </div>
+    </main >
   );
 };
 

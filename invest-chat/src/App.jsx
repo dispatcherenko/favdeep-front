@@ -1,10 +1,12 @@
+import "./styles/index.scss";
+
 import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import SignInModal from "./components/UI/Modals/SignInModal";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RegistrationPage from "./pages/Registration/Registration";
-import "./styles/index.scss";
+import Profile from "./pages/Profile/Profile";
 import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
@@ -16,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <SignInModal active={modalActive} setActive={setModalActive} />
       </BrowserRouter>
