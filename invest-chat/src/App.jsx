@@ -12,7 +12,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
-  
 
   return (
     <div className="App">
@@ -24,7 +23,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/chat" element={<ChatWithBot />} />
         </Routes>
-        <SignInModal active={modalActive} setActive={setModalActive} />
+        {modalActive && <SignInModal setActive={setModalActive} />}
       </BrowserRouter>
     </div>
   );
