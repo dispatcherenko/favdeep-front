@@ -1,7 +1,5 @@
 import "./SignInModal.scss";
-import { ButtonFactory } from "../Buttons/Buttons";
-import { useState } from "react";
-
+import ButtonFactory from "../Buttons/Buttons"
 
 const SignInModal = ({ active, setActive }) => {
 
@@ -66,9 +64,16 @@ const SignInModal = ({ active, setActive }) => {
                   type="password"
                   name="password"
                 />
+                <div className="sign__know-mebox">
+                  <div>
+                    <input type="checkbox" />
+                    <label htmlFor="">Запомнить меня</label>
+                  </div>
+                  <div><a href="/">Забыли пароль</a></div>
+                </div>
                 <div className="sign__or">или</div>
                 <ButtonFactory type="red">Вход через mos.ru</ButtonFactory>
-                <p href=""><a href="">Eще не регистрировались?</a></p>
+                <p href=""><a href="/">Eще не регистрировались?</a></p>
               </form>
             </div>
             <div class="sign__tabs__item" id="tab_2">
@@ -82,30 +87,12 @@ const SignInModal = ({ active, setActive }) => {
                 />
                 <div className="sign__or">или</div>
                 <ButtonFactory type="red">Вход через mos.ru</ButtonFactory>
-                <p href=""><a href="">Eще не регистрировались?</a></p>
+                <p href="/"><a href="/">Eще не регистрировались?</a></p>
               </form>
             </div>
           </div>
         </div>
-        {/* <input
-          className="sign__number-input"
-          type="phone"
-          name="phone-number"
-          placeholder="Номер телефона"
-        />
-        <input
-          className="sign__email-input"
-          type="email"
-          name="email-address"
-          placeholder="Email"
-        />
-        <div className="sign__or">или</div>
-        <ButtonFactory type="red">Вход через mos.ru</ButtonFactory>
-        <p href="">
-          <a href="">Eще не регистрировались?</a>
-        </p>
-      </form> */}
-    </div>
+      </div>
     </main >
   );
 };
