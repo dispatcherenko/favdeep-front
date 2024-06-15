@@ -7,7 +7,7 @@ const Header = ({ setModalActive }) => {
   const navigate = useNavigate();
 
   return (
-    <header className="header">
+    <header className="header" id="header">
       <div
         onClick={() => {
           navigate("/");
@@ -16,7 +16,7 @@ const Header = ({ setModalActive }) => {
       >
         <ReactSVG src="assets/logo.svg" />
       </div>
-      <nav className="header__nav">
+      <nav className="header__nav" id="nav">
         <ButtonFactory type="white" onClick={() => setModalActive(true)}>
           Войти
         </ButtonFactory>

@@ -1,8 +1,49 @@
+.sign__tabs__item:not(._active) {
+  display: none;
+}
+
+._active-button {
+  background:  rgba(225, 9, 21, 1);
+  width: 200px;
+  color: #fff;
+  border: 0px solid rgba(215, 215, 215, 1);
+}
+
 .sign {
   position: fixed;
-
   opacity: 0;
   pointer-events: none;
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__button {
+      font-size: 18px;
+      width: 236px;
+      height: 44px;
+      border: 0px solid rgba(52, 52, 52, 1);
+      
+      &:not(._active-button) {
+        background: rgba(250, 250, 250, 1);
+        border: 1px solid rgba(215, 215, 215, 1);
+      }
+
+      &-left {
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      &-right {
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
+  }
+
+  &__nav {
+    margin-bottom: 20px;
+  }
 
   &__active {
     opacity: 1;
@@ -15,7 +56,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-    background: rgb(46 46 46 / 71%);
+    background: rgba(255, 255, 255, 0);
     pointer-events: all;
     backdrop-filter: blur(3px);
   }
@@ -23,10 +64,9 @@
   &__block {
     width: 980px;
     margin: 0 auto;
-    // display: flex;
-    // justify-content: center;
-    background-color: $grey-form;
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 12px;
+    box-shadow: 10px 24px 54px 0px rgba(0, 0, 0, 0.06);
   }
 
   &__form {
@@ -44,12 +84,16 @@
     }
 
     & p {
-      margin: 12px 0 68px 0
+      margin: 12px 0 26px;
     }
 
+    & label {
+      position: relative;
+      align-self: baseline;
+      margin: 0 0 12px 14px;
+    }
 
     & [type="red"] {
-      background-color: rgba(52, 52, 52, 1);
       width: 524px;
       height: 44px;
       border-radius: 100px;
@@ -67,7 +111,7 @@
     letter-spacing: 1px;
     font-weight: 400;
     font-size: 16px;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 
   &__number-input {
@@ -88,8 +132,30 @@
     margin-bottom: 26px;
   }
 
+  &__know-mebox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & [type="checkbox"] {
+      margin-left: 13px;
+      transform:scale(1.3);
+      accent-color:  rgba(241, 47, 67, 1);
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid  rgba(104, 104, 104, 1);
+    }
+
+    & a {
+      margin-right: 13px;
+      // border-bottom: dashed;
+      text-decoration: underline;
+    }
+  }
+
+
 
   &__or {
+
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -104,6 +170,8 @@
       margin-right: 12px;
       background-color: $grey-form-module;
     }
+
+
 
     &:after {
       content: '';
