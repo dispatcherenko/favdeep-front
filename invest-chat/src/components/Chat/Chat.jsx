@@ -5,10 +5,13 @@ import "./Chat.scss";
 import { useState } from "react";
 
 const Chat = (props) => {
+  const [category, setCategory] = useState("");
+
   const [newMessage, setNewMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const [toCategory, setToCategory] = useState(false);
+  const [isCategorySelected, setCategorySelected] = useState(false);
 
   const onInputChanged = (e) => {
     setNewMessage(e.target.value);
@@ -36,6 +39,8 @@ const Chat = (props) => {
         }),
       };
       props.setMessages([...props.messages, userMessage]);
+
+      setCategorySelected(true);
     } catch (error) {
       console.error("Ошибка при отправке сообщения:", error);
     } finally {
@@ -114,7 +119,7 @@ const Chat = (props) => {
       setIsLoading(true);
 
       try {
-        if (!toCategory) {
+        if (!toCategory && !isCategorySelected) {
           const response = await axios.post(
             "https://ai-assistent-backend.onrender.com/api/ask/",
             {
@@ -130,19 +135,18 @@ const Chat = (props) => {
 
           props.setMessages([...props.messages, userMessage, botMessage]);
         } else {
-          // Отправляем запрос к API с message и category
           const response = await axios.post(
             "https://ai-assistent-backend.onrender.com/api/ask/category/",
             {
               message: newMessage,
-              category: props.category,
+              category: category,
             }
           );
 
           const botMessage = {
             id: props.messages.length + 1,
             type: "bot",
-            text: response.data.response.join(", "),
+            text: response.data.response + " ",
           };
 
           props.setMessages([...props.messages, userMessage, botMessage]);
@@ -156,7 +160,7 @@ const Chat = (props) => {
       props.setMessages([
         ...props.messages,
         {
-          id: props.messages.length,
+          id: props.messages.length + 1,
           type: "bot",
           text: "Вы ничего не написали.",
         },
@@ -175,7 +179,7 @@ const Chat = (props) => {
     props.setMessages([
       ...props.messages,
       {
-        id: props.messages.length,
+        id: props.messages.length + 1,
         type: "bot",
         text: "Спрашивайте, я постараюсь помочь вам.",
       },
@@ -191,7 +195,8 @@ const Chat = (props) => {
             type={item.type}
             text={item.text}
             key={item.id}
-            setCategory={props.setCategory}
+            isCategorySelected={isCategorySelected}
+            setCategory={setCategory}
             buttons={item.buttons}
             getChoices={getChoices}
             getFilters={getFilters}

@@ -7,6 +7,7 @@ const MessageFactory = (props) => {
   const onClickHandler = (item) => {
     switch (item.type) {
       case "setCategory": {
+        props.setCategory(item.id.toString());
         props.getFilters(item.id);
         break;
       }
@@ -44,12 +45,10 @@ const MessageFactory = (props) => {
                 </ButtonFactory>
               );
             })}
-            {props.category !== "" ? (
+            {props.isCategorySelected && (
               <ButtonFactory type="white" onClick={props.setToCategory}>
                 Мне не подходит ни один из фильтров.
               </ButtonFactory>
-            ) : (
-              <></>
             )}
           </div>
         </div>

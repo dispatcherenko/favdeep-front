@@ -3,8 +3,6 @@ import Chat from "../../components/Chat/Chat";
 import "./ChatWithBot.scss";
 
 const ChatWithBot = () => {
-  const [category, setCategory] = useState("");
-
   const [messages, setMessages] = useState([
     {
       id: 0,
@@ -32,12 +30,7 @@ const ChatWithBot = () => {
 
   return (
     <div className="chat">
-      <Chat
-        messages={messages}
-        setMessages={setMessages}
-        category={category}
-        setCategory={setCategory}
-      />
+      <Chat messages={messages} setMessages={setMessages} />
     </div>
   );
 };

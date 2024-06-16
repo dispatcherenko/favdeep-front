@@ -16,14 +16,17 @@ Userfront.init("");
 
 function App() {
   useState(() => {
+    console.log("1ajk");
     const refresh = async () => {
       try {
         const response = await axios.post(
           "https://ai-assistent-backend.onrender.com/api/refresh/",
-          localStorage.getItem("refresh")
+          { refresh: localStorage.getItem("refresh") }
         );
       } catch (error) {}
     };
+
+    refresh();
   }, []);
 
   const [modalActive, setModalActive] = useState(false);
