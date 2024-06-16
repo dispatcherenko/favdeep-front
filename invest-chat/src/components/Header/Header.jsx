@@ -47,7 +47,7 @@ const Header = ({ setModalActive }) => {
         </ButtonFactory>
         <ButtonFactory
           onClick={() => {
-            navigate("/");
+            navigate("/chat");
           }}
           type="red"
         >

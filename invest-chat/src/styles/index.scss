@@ -6,6 +6,13 @@
   color: $black;
 }
 
+body,
+.App,
+#root,
+html {
+  height: 100%;
+}
+
 a {
   color: $red;
 }
