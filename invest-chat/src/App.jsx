@@ -1,5 +1,7 @@
 import "./styles/index.scss";
 
+import { jwtDecode } from "jwt-decode";
+
 import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import SignInModal from "./components/UI/Modals/SignInModal";
@@ -15,23 +17,37 @@ import axios from "axios";
 Userfront.init("");
 
 function App() {
+  const [modalActive, setModalActive] = useState(false);
+
+  const [user, setUser] = useState({});
+
   useState(() => {
-    console.log("1ajk");
     const refresh = async () => {
       try {
-        const response = await axios.post(
+        const responseRefresh = await axios.post(
           "https://ai-assistent-backend.onrender.com/api/refresh/",
           { refresh: localStorage.getItem("refresh") }
         );
-      } catch (error) {}
+        const decoded = jwtDecode(responseRefresh.data.access);
+        login(decoded.user_id);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    const login = async (id) => {
+      try {
+        const responseGetUser = await axios.get(
+          `https://ai-assistent-backend.onrender.com/api/user/${id}/`
+        );
+        setUser(responseGetUser);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     refresh();
   }, []);
-
-  const [modalActive, setModalActive] = useState(false);
-
-  const [user, setUser] = useState({});
 
   return (
     <div className="App">
