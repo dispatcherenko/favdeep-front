@@ -10,11 +10,13 @@ import Profile from "./pages/Profile/Profile";
 import ChatWithBot from "./pages/Chat/ChatWithBot";
 import Userfront, { SignupForm } from "@userfront/toolkit/react";
 
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import axios from "axios";
 
 Userfront.init("");
+
+const UserContext = createContext();
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
@@ -40,23 +42,22 @@ function App() {
         const responseGetUser = await axios.get(
           `https://ai-assistent-backend.onrender.com/api/user/${id}/`
         );
-        setUser(responseGetUser);
+        setUser(responseGetUser.data);
       } catch (error) {
         console.log(error);
       }
     };
-
     refresh();
   }, []);
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Header setModalActive={setModalActive} />
+        <Header setModalActive={setModalActive} user={user} />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} user={user} />
           <Route path="/chat" element={<ChatWithBot />} />
         </Routes>
         {modalActive && <SignInModal setActive={setModalActive} />}

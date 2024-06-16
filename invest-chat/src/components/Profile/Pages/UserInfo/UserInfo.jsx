@@ -75,7 +75,7 @@ const UserInfo = (props) => {
       </nav>
       <RegistrationCard className={`user-info__card ${selectedPage}`}>
         {selectedPage === "info" && !isChanging["info"] ? (
-          <Info setIsChanging={setIsChanging} />
+          <Info setIsChanging={setIsChanging} user={props.user} />
         ) : (
           <></>
         )}

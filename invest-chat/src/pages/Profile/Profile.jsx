@@ -36,7 +36,7 @@ const Profile = (props) => {
         </div>
 
         <div className="profile__left">
-          <UserInfo />
+          <UserInfo user={props.user} />
         </div>
       </div>
     </main>

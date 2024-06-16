@@ -5,9 +5,9 @@ const Info = (props) => {
   return (
     <div className="user-info__info">
       <div className="user-info__info-right">
-        <p className="user-info__text">Иванов Иван</p>
-        <p className="user-info__text">+7000000000</p>
-        <p className="user-info__text">name@example.ru</p>
+        <p className="user-info__text">{props.user}</p>
+        <p className="user-info__text">{props.user}</p>
+        <p className="user-info__text">{props.user}</p>
         <ButtonFactory
           className="user-info__button"
           type="white"
