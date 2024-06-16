@@ -20,7 +20,7 @@ const Header = ({ setModalActive }) => {
         <ButtonFactory type="white" onClick={() => setModalActive(true)}>
           Войти
         </ButtonFactory>
-        <ReactSVG
+        {/* <ReactSVG
           className="header__link"
           src="../../assets/bell.svg"
           alt="user"
@@ -35,7 +35,7 @@ const Header = ({ setModalActive }) => {
           onClick={() => {
             navigate("/profile");
           }}
-        />
+        /> */}
         <ButtonFactory
           onClick={() => {
             navigate("/registration");

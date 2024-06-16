@@ -31,4 +31,11 @@
   padding: 13px 23px;
 
   align-self: flex-start;
+
+  &__buttons {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 }

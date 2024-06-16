@@ -81,6 +81,11 @@
     border: 2px solid $black;
   }
 
+  &__radio-label:after,
+  &__radio-label:before {
+    transition: all 0.2s;
+  }
+
   /* Checked */
   input[type="radio"]:checked + &__radio-label:after {
     content: "";
@@ -92,15 +97,16 @@
     bottom: 1px;
     background-color: $black;
     border-radius: 50%;
+    opacity: 1;
   }
 
   /* Hover */
   &__radio-label:hover:before {
-    border: 2px solid $grey;
+    border: 2px solid $grey-light;
   }
 
   input[type="radio"]:hover + &__radio-label:hover:after {
-    background-color: $grey;
+    background-color: $grey-light;
   }
 
   &__text-field {
