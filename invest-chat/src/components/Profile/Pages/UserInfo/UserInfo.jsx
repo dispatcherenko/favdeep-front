@@ -7,7 +7,7 @@ import InfoEdit from "./Pages/InfoEdit";
 import StatusEdit from "./Pages/StatusEdit";
 import { useState } from "react";
 
-const UserInfo = (props) => {
+const UserInfo = ({ user }) => {
   const [selectedPage, setSelectedPage] = useState("info");
   const [isChanging, setIsChanging] = useState({
     info: false,
@@ -75,13 +75,13 @@ const UserInfo = (props) => {
       </nav>
       <RegistrationCard className={`user-info__card ${selectedPage}`}>
         {selectedPage === "info" && !isChanging["info"] ? (
-          <Info setIsChanging={setIsChanging} user={props.user} />
+          <Info setIsChanging={setIsChanging} user={user} />
         ) : (
           <></>
         )}
         {isChanging["info"] && <InfoEdit />}
         {selectedPage === "status" && !isChanging["status"] ? (
-          <Status setIsChanging={setIsChanging} />
+          <Status setIsChanging={setIsChanging} user={user} />
         ) : (
           <></>
         )}

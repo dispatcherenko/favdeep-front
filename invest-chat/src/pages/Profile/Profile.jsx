@@ -1,7 +1,7 @@
 import UserInfo from "../../components/Profile/Pages/UserInfo/UserInfo";
 import "./Profile.scss";
 
-const Profile = (props) => {
+const Profile = ({ user }) => {
   return (
     <main className="profile">
       <div className="profile__container">
@@ -36,7 +36,7 @@ const Profile = (props) => {
         </div>
 
         <div className="profile__left">
-          <UserInfo user={props.user} />
+          <UserInfo user={user} />
         </div>
       </div>
     </main>

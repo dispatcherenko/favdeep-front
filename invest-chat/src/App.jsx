@@ -49,7 +49,7 @@ function App() {
     };
     refresh();
   }, []);
-
+  console.log(user);
   return (
     <div className="App">
       <BrowserRouter>
@@ -57,7 +57,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
-          <Route path="/profile" element={<Profile />} user={user} />
+          <Route path="/profile" element={<Profile user={user} />} />
           <Route path="/chat" element={<ChatWithBot />} />
         </Routes>
         {modalActive && <SignInModal setActive={setModalActive} />}
